@@ -1,11 +1,12 @@
 'use client';
 import { TypeAnimation } from 'react-type-animation';
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Main(){
 return(
   <div>
-  <main className="relative bg-gray-900 text-white min-h-screen flex items-center justify-center text-center py-24 bg-cover bg-center" style={{ backgroundImage: "url('/images/hero-background.jpg')" }}>
+  <main className="relative bg-black text-white min-h-screen flex items-center justify-center text-center py-24 bg-cover bg-center" style={{ backgroundImage: "url('/images/hero-background.jpg')" }}>
   {/* Overlay to improve text contrast */}
   <div className="absolute inset-0 bg-black opacity-50"></div>
 
@@ -17,18 +18,16 @@ return(
     </h2>
     {/* Your Image (Optional) */}
     <div className="mb-8">
-      <img 
-        src="/pic/girl-avatar.jpg" 
-        alt="Your Name" 
-        className="w-40 h-40 rounded-full mx-auto border-4 border-white shadow-lg transform hover:scale-105 transition-transform duration-300"
-      />
+      <Image 
+        src={"/pic/girl-avatar.jpg"} 
+        alt={"pic"} width={160} height={160}
+        className={"w-40 h-40 rounded-full mx-auto border-4 border-white shadow-lg transform hover:scale-105 transition-transform duration-300"}
+      ></Image>
     </div>
     
-    {/* <h2 className="text-4xl font-extrabold text-white mb-4 animate__animated animate__fadeIn animate__delay-1s">
-      Welcome to My Portfolio
-    </h2> */}
+    
     <h1 >
-    <span className="text-4xl font-extrabold text-purple-700 mb-4 animate__animated animate__fadeIn animate__delay-1s">Hello,I'm {""}
+    <span className="text-4xl font-extrabold text-purple-700 mb-4 animate__animated animate__fadeIn animate__delay-1s">Hello,I&apos;m {""}
       </span>
       <TypeAnimation
 sequence={[
@@ -46,8 +45,8 @@ speed={50}
 style={{ fontSize: '2em', display: 'inline-block',color:'#ec4899'}}
 repeat={Infinity}/>
     </h1>
-    <p className="text-lg text-gray-300 mb-8 animate__animated animate__fadeIn animate__delay-2s">
-      I'm a passionate developer who loves building beautiful websites and applications.
+    <p className="text-lg text-white mb-8 font-semibold animate__animated animate__fadeIn animate__delay-2s">
+      I&apos;m a passionate developer who loves building beautiful websites and applications.
     </p>
 
 
